@@ -20,5 +20,7 @@ describe("Repositorio", () => {
     });
     cy.wait(1000);
     cy.get(".select-menu-list a").eq(2).click({ force: true });
+    cy.get(":nth-child(1) > .mt-n1 > .f4 > .message").click();
+    cy.get(".commit-title").should("contain", "HyperBlog runs on EC2");
   });
 });
